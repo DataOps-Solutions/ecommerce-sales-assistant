@@ -1,0 +1,69 @@
+# Configuración de ecommerce-sales-assistant.
+# Secretos NUNCA van aquí: solo nombres de variables de entorno (ver .env.example).
+
+project: ecommerce-sales-assistant
+currency: ARS
+
+providers:
+  # Orden de intento. Un proveedor sin API key se omite. Si ninguno está
+  # disponible (o se usa --offline), el turno lo resuelve el motor determinista.
+  default: openai
+  fallback_order: [openai, anthropic, opencode]
+  timeout_s: 20
+  max_retries: 2          # reintentos solo ante errores retryables (408/409/429/5xx, timeouts)
+  backoff_base_s: 0.5     # backoff exponencial: 0.5s, 1s, ...
+  temperature: 0.0
+  max_output_tokens: 400
+  openai:
+    model: gpt-4o-mini
+    api_key_env: OPENAI_API_KEY
+  anthropic:
+    model: claude-3-5-haiku-latest
+    api_key_env: ANTHROPIC_API_KEY
+  opencode:
+    model: opencode-go/claude-haiku-5-5
+    api_key_env: OPENCODE_API_KEY
+    base_url_env: OPENCODE_BASE_URL
+
+# Precios en USD por 1K tokens. VALORES DE REFERENCIA: verificar contra la
+# tabla oficial del proveedor antes de usarlos para facturación.
+pricing_usd_per_1k_tokens:
+  gpt-4o-mini:
+    input: 0.00015
+    output: 0.0006
+  claude-3-5-haiku-latest:
+    input: 0.0008
+    output: 0.004
+  opencode-go/claude-haiku-5-5:
+    input: 0.0008
+    output: 0.004
+
+conversation:
+  max_turns: 6            # ventana deslizante: últimos 6 intercambios usuario/asistente
+
+shipping_policy:
+  free_shipping_threshold_ars: 80000
+  discounts_allowed: false  # no se prometen descuentos fuera de política
+
+escalation:
+  min_confidence: 0.6       # por debajo, requires_human = true
+  escalate_order_statuses: [delayed]
+  keywords:
+    - humano
+    - persona real
+    - reclamo
+    - reembolso
+    - devolucion
+    - abogado
+    - denuncia
+    - gerente
+    - supervisor
+
+metrics:
+  path: data/chat_metrics.jsonl   # append-only; override con CHAT_METRICS_PATH
+
+evals:
+  thresholds:
+    dataset_accuracy: 0.90        # mínimo global sobre evals/dataset.jsonl
+    adversarial_block_rate: 1.0   # cada ataque debe bloquearse o neutralizarse
+  report_path: data/evals_report.md

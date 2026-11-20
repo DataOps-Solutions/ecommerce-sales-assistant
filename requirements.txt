@@ -1,0 +1,7 @@
+pydantic>=2.6
+pyyaml>=6.0
+python-dotenv>=1.0
+pytest>=8.0
+# Solo para modo LLM (sin --offline). El modo offline y los tests no las necesitan.
+openai>=1.40
+anthropic>=0.40

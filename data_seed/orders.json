@@ -1,0 +1,44 @@
+[
+  {
+    "order_id": "ORD-1001",
+    "customer_email": "ana.perez@example.com",
+    "status": "shipped",
+    "tracking_code": "TRK-AR-884213",
+    "eta_days": 2
+  },
+  {
+    "order_id": "ORD-1002",
+    "customer_email": "bruno.gomez@example.com",
+    "status": "preparing",
+    "tracking_code": null,
+    "eta_days": 4
+  },
+  {
+    "order_id": "ORD-1003",
+    "customer_email": "carla.lopez@example.com",
+    "status": "delivered",
+    "tracking_code": "TRK-AR-702958",
+    "eta_days": 0
+  },
+  {
+    "order_id": "ORD-1004",
+    "customer_email": "diego.ruiz@example.com",
+    "status": "delayed",
+    "tracking_code": "TRK-AR-615377",
+    "eta_days": 6
+  },
+  {
+    "order_id": "ORD-1005",
+    "customer_email": "eva.martin@example.com",
+    "status": "shipped",
+    "tracking_code": "TRK-AR-930146",
+    "eta_days": 1
+  },
+  {
+    "order_id": "ORD-1006",
+    "customer_email": "facundo.diaz@example.com",
+    "status": "preparing",
+    "tracking_code": null,
+    "eta_days": 3
+  }
+]

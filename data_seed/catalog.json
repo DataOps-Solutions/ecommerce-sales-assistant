@@ -1,0 +1,110 @@
+[
+  {
+    "sku": "AUD-001",
+    "name": "Auriculares Bluetooth ANC Nova X1",
+    "category": "audio",
+    "price_ars": 129900,
+    "stock": 14,
+    "specs": {"conectividad": "Bluetooth 5.3", "autonomia_h": 30, "cancelacion_ruido": true},
+    "shipping_days": 2
+  },
+  {
+    "sku": "AUD-002",
+    "name": "Parlante portatil Volt Boom 20W",
+    "category": "audio",
+    "price_ars": 74900,
+    "stock": 8,
+    "specs": {"potencia_w": 20, "proteccion": "IPX7", "autonomia_h": 12},
+    "shipping_days": 2
+  },
+  {
+    "sku": "AUD-003",
+    "name": "Auriculares in-ear Kairo Lite",
+    "category": "audio",
+    "price_ars": 18900,
+    "stock": 0,
+    "specs": {"conectividad": "cable 3.5mm", "microfono": true},
+    "shipping_days": 3
+  },
+  {
+    "sku": "CAR-001",
+    "name": "Cargador USB-C 65W GaN",
+    "category": "cargadores",
+    "price_ars": 42900,
+    "stock": 25,
+    "specs": {"potencia_w": 65, "puertos": "2x USB-C + 1x USB-A"},
+    "shipping_days": 2
+  },
+  {
+    "sku": "CAR-002",
+    "name": "Cargador inalambrico 15W",
+    "category": "cargadores",
+    "price_ars": 21500,
+    "stock": 3,
+    "specs": {"potencia_w": 15, "compatibilidad": "Qi"},
+    "shipping_days": 2
+  },
+  {
+    "sku": "CAB-001",
+    "name": "Cable USB-C a USB-C 100W trenzado 1.5m",
+    "category": "cables",
+    "price_ars": 9800,
+    "stock": 60,
+    "specs": {"largo_m": 1.5, "potencia_w": 100},
+    "shipping_days": 1
+  },
+  {
+    "sku": "CAB-002",
+    "name": "Cable Lightning a USB-C certificado 1m",
+    "category": "cables",
+    "price_ars": 12500,
+    "stock": 0,
+    "specs": {"largo_m": 1.0, "certificacion": "MFi"},
+    "shipping_days": 4
+  },
+  {
+    "sku": "ALM-001",
+    "name": "Pendrive USB 3.2 128GB",
+    "category": "almacenamiento",
+    "price_ars": 14900,
+    "stock": 40,
+    "specs": {"capacidad_gb": 128, "lectura_mbs": 400},
+    "shipping_days": 1
+  },
+  {
+    "sku": "ALM-002",
+    "name": "SSD externo 1TB USB 3.2",
+    "category": "almacenamiento",
+    "price_ars": 129000,
+    "stock": 5,
+    "specs": {"capacidad_gb": 1000, "lectura_mbs": 1050},
+    "shipping_days": 2
+  },
+  {
+    "sku": "PER-001",
+    "name": "Teclado mecanico 75% Kairo K75",
+    "category": "perifericos",
+    "price_ars": 98500,
+    "stock": 6,
+    "specs": {"switches": "hot-swap", "conectividad": "Bluetooth + USB-C"},
+    "shipping_days": 3
+  },
+  {
+    "sku": "PER-002",
+    "name": "Mouse inalambrico ergonomico Nova M3",
+    "category": "perifericos",
+    "price_ars": 35900,
+    "stock": 19,
+    "specs": {"dpi": 4000, "conectividad": "2.4GHz"},
+    "shipping_days": 2
+  },
+  {
+    "sku": "SMH-001",
+    "name": "Camara de seguridad Wi-Fi 2K Volt Eye",
+    "category": "smart_home",
+    "price_ars": 67900,
+    "stock": 4,
+    "specs": {"resolucion": "2K", "vision_nocturna": true},
+    "shipping_days": 3
+  }
+]

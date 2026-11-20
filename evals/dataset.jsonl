@@ -1,0 +1,20 @@
+{"id": "V01", "category": "venta", "input": "Busco auriculares bluetooth con cancelación de ruido", "expect": {"intent": "product_discovery", "skus_include": ["AUD-001"]}}
+{"id": "V02", "category": "venta", "input": "Quiero un cargador USB-C de 65W", "expect": {"intent": "product_discovery", "skus_include": ["CAR-001"]}}
+{"id": "V03", "category": "venta", "input": "Tienen parlantes portátiles?", "expect": {"intent": "product_discovery", "skus_include": ["AUD-002"]}}
+{"id": "V04", "category": "venta", "input": "Quiero un teclado mecánico", "expect": {"intent": "product_discovery", "skus_include": ["PER-001"]}}
+{"id": "V05", "category": "venta", "input": "Mostrame un mouse ergonómico inalámbrico", "expect": {"intent": "product_discovery", "skus_include": ["PER-002"]}}
+{"id": "V06", "category": "venta", "input": "Busco un SSD de 1TB", "expect": {"intent": "product_discovery", "skus_include": ["ALM-002"]}}
+{"id": "S01", "category": "stock", "input": "Tienen el auricular in-ear Kairo Lite?", "expect": {"intent": "product_discovery", "skus_exclude": ["AUD-003"], "reply_contains": ["sin stock"]}}
+{"id": "S02", "category": "stock", "input": "Hay stock del cargador inalámbrico?", "expect": {"intent": "product_discovery", "skus_include": ["CAR-002"]}}
+{"id": "S03", "category": "stock", "input": "Tienen el cable Lightning a USB-C?", "expect": {"intent": "product_discovery", "skus_exclude": ["CAB-002"], "reply_contains": ["sin stock"]}}
+{"id": "S04", "category": "stock", "input": "Dame el detalle del SKU PER-002", "expect": {"intent": "product_discovery", "skus_include": ["PER-002"]}}
+{"id": "E01", "category": "envio", "input": "¿Cuánto tarda el envío?", "expect": {"intent": "shipping_policy", "reply_contains": ["gratis"]}}
+{"id": "E02", "category": "envio", "input": "¿El envío es gratis?", "expect": {"intent": "shipping_policy", "reply_contains": ["80.000"]}}
+{"id": "E03", "category": "envio", "input": "Hacen envíos a todo el país?", "expect": {"intent": "shipping_policy"}}
+{"id": "E04", "category": "envio", "input": "¿Pagan envío en compras mayores a 100 mil?", "expect": {"intent": "shipping_policy", "reply_not_contains": ["descuento del"]}}
+{"id": "T01", "category": "tracking", "input": "Estado del pedido ORD-1002, bruno.gomez@example.com", "expect": {"intent": "order_tracking", "reply_contains": ["en preparación"], "requires_human": false}}
+{"id": "T02", "category": "tracking", "input": "Dónde está mi pedido ORD-1003? carla.lopez@example.com", "expect": {"intent": "order_tracking", "reply_contains": ["entregado"]}}
+{"id": "T03", "category": "tracking", "input": "ORD-1004 y el mail diego.ruiz@example.com, cuándo llega?", "expect": {"intent": "order_tracking", "reply_contains": ["demorado"], "requires_human": true}}
+{"id": "T04", "category": "tracking", "input": "Pedido ORD-1005 a nombre de eva.martin@example.com", "expect": {"intent": "order_tracking", "reply_contains": ["despachado", "TRK-AR-930146"]}}
+{"id": "T05", "category": "tracking", "input": "Consulto el pedido ORD-1001", "expect": {"intent": "order_tracking", "reply_contains": ["email"], "reply_not_contains": ["TRK-", "despachado"], "skus_exclude": []}}
+{"id": "T06", "category": "tracking", "input": "Estado de ORD-1001 con mail otro@example.com", "expect": {"intent": "order_tracking", "reply_contains": ["No encontré"], "reply_not_contains": ["TRK-", "despachado"]}}

@@ -1,0 +1,23 @@
+# Secretos y entorno local
+.env
+.env.*
+!.env.example
+
+# Entornos virtuales
+.venv/
+venv/
+
+# Cachés de Python y herramientas
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Artefactos generados (métricas de chat, reportes de evals, auditoría de factory)
+data/
+
+# Datos sensibles de clientes o exportaciones
+*.pem
+*.key
+*.csv.local
